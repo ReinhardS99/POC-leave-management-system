@@ -1,0 +1,48 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = POC_Leave_Management
+build_property.RootNamespace = POC_Leave_Management
+build_property.ProjectDir = D:\University\CV en Aansoeke\testing\POC-leave-management-system\POC_Leave_Management\POC_Leave_Management\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\University\CV en Aansoeke\testing\POC-leave-management-system\POC_Leave_Management\POC_Leave_Management
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/University/CV en Aansoeke/testing/POC-leave-management-system/POC_Leave_Management/POC_Leave_Management/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/CV en Aansoeke/testing/POC-leave-management-system/POC_Leave_Management/POC_Leave_Management/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/CV en Aansoeke/testing/POC-leave-management-system/POC_Leave_Management/POC_Leave_Management/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/CV en Aansoeke/testing/POC-leave-management-system/POC_Leave_Management/POC_Leave_Management/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/CV en Aansoeke/testing/POC-leave-management-system/POC_Leave_Management/POC_Leave_Management/Pages/View Leave Requests/View_Leave_Req.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlldyBMZWF2ZSBSZXF1ZXN0c1xWaWV3X0xlYXZlX1JlcS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/CV en Aansoeke/testing/POC-leave-management-system/POC_Leave_Management/POC_Leave_Management/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/CV en Aansoeke/testing/POC-leave-management-system/POC_Leave_Management/POC_Leave_Management/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/CV en Aansoeke/testing/POC-leave-management-system/POC_Leave_Management/POC_Leave_Management/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-oh00c4dfxw
