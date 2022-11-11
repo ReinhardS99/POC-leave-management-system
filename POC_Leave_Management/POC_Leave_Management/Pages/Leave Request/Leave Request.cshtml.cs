@@ -4,57 +4,55 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 using POC_Leave_Management.Models;
 using System.ComponentModel;
+using system.data.sqlclient;
 
 namespace POC_Leave_Management.Pages.View_Leave_Requests
 {
-    public List<View_Req> ListView = new List<View_Req>();
-    public class Leave Request Model : PageModel
+    public LeaveInfo leaveInfo = new LeaveInfo();
+    public String errorMessage = "";
+    public String successMessage = "";
+    public class Leave RequestModel : PageModel
     {
         public void OnGet()
         {
-            try
-            {
-                string Constr = "Password=ShadowStriderFantasy1599!;Persist Security Info=True;User ID=Steynrp_29997313;Initial Catalog=dbLeave_management;Data Source=poc-interview.database.windows.net\r\n";
-                using (SqlConnection con = new SqlConnection(Constr))
-                {
-                    con.Open();
-                    String sql = "SELECT * FROM Request_Leave";
-                    using(SqlCommand cmd = new SqlCommand(sql, Constr))
-                    {
-                        using(SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                View_Req view_Req = new View_Req();
-                                view_Req.Id = "" + reader.GetInt32(0);
-                                view_Req.FName = reader.GetString(1);
-                                view_Req.LName = reader.GetString(2);
-                                view_Req.lstart = reader.GetDateTime(3).ToString();
-                                view_Req.lend = reader.GetDateTime(4).ToString();
-                                view_Req.sReason = reader.GetString(5);
-
-                                ListView.add(view_Req);
-                            }
-                        }
-                    }
-                }
             
-            }catch (Exception ex)
+        }
+    
+
+        public void OnPost()
+        {
+        leaveInfo.Fname = Request.Form["Fname"];
+        leaveInfo.Lname = Request.Form["Lname"];
+        leaveInfo.Sdate = Request.Form["sdate"];
+        leaveInfo.Edate = Request.Form["edate"];
+        leaveInfo.Reason = Request.Form["RfLeave"];
+
+        if (clientInfo.Fname.length == 0 || clientInfo.Lname.Length == 0 || clientInfo.Sdate.Length == 0 || clientInfo.Edate.Length == 0 || clientInfo.RfLeave.Length == 0)
+        {
+            errorMessage = "All the fields are required";
+            return;
+        }
+
+        try
+        {
+            string connectionstring = "Password=ShadowStriderFantasy1599!;Persist Security Info=True;User ID=Steynrp_29997313;Initial Catalog=dbLeave_management;Data Source=poc-interview.database.windows.net\r\n";
+            using(SqlConnection connection = new SqlConnection(connectionstring))
             {
-                Console.WriteLine("Exception "+ex.ToString());
+                connection.Open();
             }
         }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;
+            return;
+        }
+        leaveInfo.Fname = "";
+        leaveInfo.Lname = "";
+        leaveInfo.Sdate ="";
+        leaveInfo.Edate = "";
+        leaveInfo.Reason = "";
+
+        successMessage = "New Leave Request added";
     }
-
-    public class View_Req
-    {
-        public int Id = 0;
-        public string FName="";
-        public string LName="";
-        public DateOnly lstart;
-        public DateOnly lend;
-        public string sReason="";
-
-
     }
 }
