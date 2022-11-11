@@ -1,0 +1,44 @@
+﻿@page
+@model POC_Leave_Management.Pages.View_Leave_Requests.View_Leave_ReqModel
+@{
+}
+
+<br />
+<h2>Create new leave requests</h2>
+<form method="post">
+    <div class="row mb-3">
+        <label class="col-sn-3 col-form-label">First Name</label>
+        <div class="col-sn-6">
+            input type="text" class="form-control" name="Fname"
+        </div>
+        <div class="row mb-3">
+            <label class="col-sn-3 col-form-label">Last Name</label>
+            <div class="col-sn-6">
+                input type="text" class="form-control" name="Lname"
+            </div>
+            <div class="row mb-3">
+                <label class="col-sn-3 col-form-label">Start Date</label>
+                <div class="col-sn-6">
+                    input type="date" class="form-control" name="sdate"
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sn-3 col-form-label">End Date</label>
+                    <div class="col-sn-6">
+                        input type="date" class="form-control" name="edate"
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sn-3 col-form-label">Reason for leave</label>
+                        <div class="col-sn-6">
+                            input type="text" class="form-control" name="RfLeave"
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="offset-sm-3 col-sm-3 d-grid">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                        <div class="offset-sm-3 d-grid">
+                            <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+                        </div>
+                    </div>
+</form>

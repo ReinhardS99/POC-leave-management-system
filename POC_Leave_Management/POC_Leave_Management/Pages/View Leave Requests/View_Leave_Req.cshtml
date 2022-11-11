@@ -17,4 +17,23 @@
             <th>Reason ID</th>
         </tr>
     </thead>
+    <tbody>
+        @foreach(var item in Models.RequestLeave)
+        {
+        <tr>
+            <td>@item.ReqId</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@item.LeaveStart</td>
+            <td>@item.LeaveEnd</td>
+            <td>@item.Reason</td>
+            <td>
+                <a class="btn btn-primary btn-sm" href="/View_Leave_Request/Edit?id=@item.ReqId">Edit</a>
+                <a class="btn btn-danger btn-sm" href="/View_Leave_Request/Delete?id=@item.ReqId">Delete</a>
+
+            </td>
+        </tr>
+
+        }
+    </tbody>
 </table>
