@@ -11,6 +11,7 @@ namespace POC_Leave_Management.Pages.View_Leave_Requests
     public LeaveInfo leaveInfo = new LeaveInfo();
     public String errorMessage = "";
     public String successMessage = "";
+    public int i=0;
     public class Leave RequestModel : PageModel
     {
         public void OnGet()
@@ -39,6 +40,22 @@ namespace POC_Leave_Management.Pages.View_Leave_Requests
             using(SqlConnection connection = new SqlConnection(connectionstring))
             {
                 connection.Open();
+                string sql = "INSERT INTO Request_Leave (Req_ID, First Name, Last Name, Leave Start, Leave End, Reason " +
+                             "VALUES (@I, @Fname, @Lname, @sdate, @edate, @RfLeave);";
+                
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@I",i);
+                    command.Parameters.AddWithValue("@Fname", leaveInfo.Fname);
+                    command.Parameters.AddWithValue("@Lname", leaveInfo.Lname);
+                    command.Parameters.AddWithValue("@sdate", leaveInfo.Sdate);
+                    command.Parameters.AddWithValue("@edate", leaveInfo.Edate);
+                    command.Parameters.AddWithValue("@RfLeave", leaveInfo.Reason);
+                    command.ExecuteNonQuery();
+                }
+                
+                
+                i++;
             }
         }
         catch (Exception ex)
@@ -53,6 +70,8 @@ namespace POC_Leave_Management.Pages.View_Leave_Requests
         leaveInfo.Reason = "";
 
         successMessage = "New Leave Request added";
+
+        Respose.Redirect("/View Leave Requests/Index");
     }
     }
 }

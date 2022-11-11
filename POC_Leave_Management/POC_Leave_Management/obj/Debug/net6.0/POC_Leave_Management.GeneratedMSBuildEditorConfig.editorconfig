@@ -35,6 +35,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/University/CV en Aansoeke/testing/POC-leave-management-system/POC_Leave_Management/POC_Leave_Management/Pages/View Leave Requests/DeleteLeave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlldyBMZWF2ZSBSZXF1ZXN0c1xEZWxldGVMZWF2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/CV en Aansoeke/testing/POC-leave-management-system/POC_Leave_Management/POC_Leave_Management/Pages/View Leave Requests/EditLeave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlldyBMZWF2ZSBSZXF1ZXN0c1xFZGl0TGVhdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/University/CV en Aansoeke/testing/POC-leave-management-system/POC_Leave_Management/POC_Leave_Management/Pages/View Leave Requests/View_Leave_Req.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlldyBMZWF2ZSBSZXF1ZXN0c1xWaWV3X0xlYXZlX1JlcS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
