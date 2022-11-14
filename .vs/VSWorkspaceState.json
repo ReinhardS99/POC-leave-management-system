@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\POC_Leave_Management",
+    "\\POC_Leave_Management\\POC_Leave_Management",
+    "\\POC_Leave_Management\\POC_Leave_Management\\Pages",
+    "\\POC_Leave_Management\\POC_Leave_Management\\Pages\\Leave Request",
+    "\\POC_Leave_Management\\POC_Leave_Management\\Pages\\View Leave Requests"
+  ],
+  "SelectedNode": "\\POC_Leave_Management\\POC_Leave_Management\\Pages\\View Leave Requests\\DeleteLeave.cshtml",
+  "PreviewInSolutionExplorer": false
+}

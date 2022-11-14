@@ -1,66 +1,25 @@
 ﻿@page
-@model POC_Leave_Management.Pages.View_Leave_Requests.DeleteModel
+@using System.Data.SqlClient;
+
 @{
-}
-
-<br />
-<h2>Edit leave requests</h2>
-
-@if(Model.errorMessage.length>0)
+    try
 {
-<div class='alert alert-warning alert-dismissal fade show' role="alert">
-    <strong>@Model.errormessage</strong>
-    <button type='button' class="btn-close" data-bs-dismiss='alert' aria-label='Close'></button>
-</div>
-}
-
-<form method="post">
-    <input type="hidden" name="id" value="@Model.leaveInfo.id" />
-    <div class="row mb-3">
-        <label class="col-sn-3 col-form-label">First Name</label>
-        <div class="col-sn-6">
-            <input type="text" class="form-control" name="Fname" value="@Model.leaveInfo.Fname" />
-        </div>
-        <div class="row mb-3">
-            <label class="col-sn-3 col-form-label">Last Name</label>
-            <div class="col-sn-6">
-                <input type="text" class="form-control" name="Lname" value="@Model.leaveInfo.Lname" />
-            </div>
-            <div class="row mb-3">
-                <label class="col-sn-3 col-form-label">Start Date</label>
-                <div class="col-sn-6">
-                    <input type="date" class="form-control" name="sdate" value="@Model.leaveInfo.Sdate" />
-                </div>
-                <div class="row mb-3">
-                    <label class="col-sn-3 col-form-label">End Date</label>
-                    <div class="col-sn-6">
-                        <input type="date" class="form-control" name="edate" value="@Model.leaveInfo.Edate" />
-                    </div>
-                    <div class="row mb-3">
-                        <label class="col-sn-3 col-form-label">Reason for leave</label>
-                        <div class="col-sn-6">
-                            <input type="text" class="form-control" name="RfLeave" value="@Model.leaveInfo.Reason" />
-                        </div>
-                    </div>
-
-                    @if (Model.successMessage.length>0)
+    String id = requeset.query["id"];
+    
+     string Constr = "Password=ShadowStriderFantasy1599!;Persist Security Info=True;User ID=Steynrp_29997313;Initial Catalog=dbLeave_management;Data Source=poc-interview.database.windows.net\r\n";
+                using (SqlConnection con = new SqlConnection(Constr))
+                {
+                    con.Open();
+                    String sql = "DELETE FROM Request_Leave WHERE Req_ID=@id";
+                    using (SqlCommand cmd = new SqlCommand(sql, Constr))
                     {
-                    <div class="row mb-3">
-                        <div class="col-sm-9">
-                            <div class='alert alert-success alert-dismissal fade show' role='alert'>
-                                <strong>@Model.successMessage</strong>
-                                <button type='button' class="btn-close" data-bs-dismiss='alert' aria-label='Close'></button>
-                            </div>
-                        </div>
-                    </div>
+                        cmd.Parameters.AddWithValue("@id", id);
+                        cmd.ExecuteNonQuery();
                     }
-
-                    <div class="row mb-3">
-                        <div class="offset-sm-3 col-sm-3 d-grid">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                        <div class="offset-sm-3 d-grid">
-                            <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
-                        </div>
-                    </div>
-</form>
+                }
+}
+catch(Exception ex)
+{
+}
+Response.Redirect("/View_Leave_Req/Index");
+}
