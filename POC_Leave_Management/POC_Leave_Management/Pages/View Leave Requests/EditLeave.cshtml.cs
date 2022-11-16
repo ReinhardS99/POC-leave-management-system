@@ -21,7 +21,7 @@ namespace POC_Leave_Management.Pages.View_Leave_Requests
 
             try
             {
-                string Constr = "Password=ShadowStriderFantasy1599!;Persist Security Info=True;User ID=Steynrp_29997313;Initial Catalog=dbLeave_management;Data Source=poc-interview.database.windows.net\r\n";
+                
                 using (SqlConnection con = new SqlConnection(Constr))
                 {
                     con.Open();
